@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="mn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Тунгалагтамир ♥ Coffee Date</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="hearts-layer" id="heartsLayer" aria-hidden="true"></div>
+
+  <main class="app">
+    <!-- START / HERO -->
+    <section class="screen screen--active" id="screenStart">
+      <div class="card hero">
+        <div class="badge">💕 Cute Invite</div>
+        <h1 class="title">
+          Тунгалагтамир аа<br/>
+          <span class="pink">миний жижигхэн surprise</span> 💖
+        </h1>
+        <p class="subtitle">
+          Надад 60 секунд өгвөл…<br/>
+          Чамтай кофе болон амтат юм ууж <span class="pink">ярилцах</span> болзоонд урьж байгааг минь зөвшөөрөх үү? ☕️
+        </p>
+
+        <div class="pill-row">
+          <span class="pill">Аз жаргал 🤍</span>
+          <span class="pill">Мөнгөтэй 🖤</span>
+          <span class="pill">Амжилттай 💗</span>
+        </div>
+
+        <button class="btn btn--primary" id="btnStart">
+          Эхэлье 💖
+        </button>
+
+        <p class="hint">зүгээр л хөөрхөн тоглоом жүү 🥰</p>
+      </div>
+    </section>
+
+    <!-- CHAT INTRO -->
+    <section class="screen" id="screenChat">
+      <div class="card chat">
+        <div class="chatHeader">
+          <div class="avatar">T</div>
+          <div>
+            <div class="chatName">Тунгалагтамир</div>
+            <div class="chatStatus">online ✨</div>
+          </div>
+        </div>
+
+        <div class="chatBody" id="chatBody"></div>
+        <div class="chatActions" id="chatActions"></div>
+      </div>
+    </section>
+
+    <!-- MINI GAME -->
+    <section class="screen" id="screenGame">
+      <div class="card game">
+        <h2 class="h2">Зүрх цуглуулъя 💗</h2>
+        <p class="subtitle2">
+          12 секундэд <b>7</b> зүрх дарж аваарай.<br/>
+          Амжилттай болбол урилга <span class="pink">unlock</span> болно!
+        </p>
+
+        <div class="gameHud">
+          <div class="hudItem">⏱️ <span id="timeLeft">12</span>s</div>
+          <div class="hudItem">💗 <span id="score">0</span> / 7</div>
+          <button class="btn btn--ghost" id="btnRestart" type="button">Дахин 🎯</button>
+        </div>
+
+        <div class="gameArena" id="arena" aria-label="heart game area"></div>
+
+        <div class="gameFooter">
+          <p class="hint2">Зөвлөгөө: хурдан дараарай 😄</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL INVITE -->
+    <section class="screen" id="screenFinal">
+      <div class="card final">
+        <div class="ribbon">Unlocked 💘</div>
+        <h2 class="h2 big">Кофе ууж, ярилцах болзоо?</h2>
+        <p class="subtitle2">
+          Чи хүсвэл <span class="pink">өөрөө өдөрөө сонгоод</span> + <span class="pink">газраа сонгоод</span> надад баталгаажуулаарай ☕️✨
+        </p>
+
+        <div class="dateBox">
+          <label class="label" for="datePick">Өдөр сонгох:</label>
+          <input class="dateInput" id="datePick" type="date" />
+
+          <label class="label" for="timePick">Цаг (сонголтоор):</label>
+          <input class="dateInput" id="timePick" type="time" value="18:30"/>
+
+          <label class="label">Кофе хаана уух вэ? (3 сонголт)</label>
+          <div class="placeGrid" id="placeGrid">
+            <!-- injected by JS -->
+          </div>
+          <div class="placeHint" id="placeHint">*Газраа сонгоогүй бол “Чиний сонгосон газар” гэж явна 😊</div>
+        </div>
+
+        <div class="ctaRow">
+          <button class="btn btn--primary" id="btnYes" type="button">Тийм ээ 💖</button>
+          <button class="btn btn--danger" id="btnNo" type="button">Үгүй 😶</button>
+          <button class="btn btn--ghost" id="btnSendMsg" type="button">Messenger дээр явуулах 📩</button>
+        </div>
+
+        <div class="result" id="result"></div>
+
+        <p class="hint">
+          *“Үгүй” товч нь жаахан зугтана 😄 (гэхдээ хүндэтгэнэ!)
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
